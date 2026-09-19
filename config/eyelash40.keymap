@@ -45,57 +45,43 @@
 
                 layer_0 {
 // -------------------------------------------------------------------------------------
-// | TAB |  Q  |  W  |  E  |  R  |  T  |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// |    /  |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |    ;     |
-// |   SHFT   |  Z  |  X  |  C  |  V  |  B  |  N  |  M   |  ,  |  .  |   “   |
-// | CTRL | GUI | ALT |        SPC       |   ENTER(MO2) | LEFT | ESC | RIGHT |
+// | ESC |  Q  |  W  |  E  |  R  |  T  |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | TAB |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |   ENTER    |
+// |   SHFT   |  Z  |  X  |  C  |  V  |  B  |  N  |  M   |  /  |  UP  |   MO(2) |
+// | CTRL | GUI | ALT |        SPACE     |   SPACE(MO1) | LEFT | DOWN | RIGHT |
                         bindings = <
-    &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp BSPC
-    &kp SLASH  &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp SEMI
-    &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT    &kp SQT
-    &kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE  &ltq 2 ENTER  &kp LEFT  &kp ESC  &kp RIGHT
+    &kp ESC    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp BSPC
+    &kp TAB  &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp ENTER
+    &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp SLASH  &kp UP    &mo 2
+    &kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE  &ltq 1 SPACE  &kp LEFT  &kp DOWN  &kp RIGHT
                         >;
                 };
 
                 layer_1 {
 // ------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |     |      |     |     |     |      |
-// |  ESC  |     |     |     |     |     |     |      |     |     |          |
-// |          |     |     |     |     |     |     |      |     | UP |  TO(0) |
-// |      |     |     |               |               |       |DOWN|         |
+// | ` |  1  |  2  |  3  |  4  |  5  |  6  |  7   |  8  |  9  |  0  | DEL |
+// | CAPS |  USB  | BT_CLR  |  BT1  |  BT2  |  BT3  |  -  |  =  |  [   |  ]  |   \    |
+// |      |  none  | none  | none | none |  ;  |  '  |  ,   |  .  |  PG_UP  |  RSHIFT |
+// |      |     |     |                  |           | HOME | PG_DN | END |
                         bindings = <
-&trans    &trans   &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-    &kp ESC  &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-    &trans  &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans  &kp UP    &tog 1
-    &trans  &trans  &trans  &trans  &trans  &trans  &kp DOWN  &trans
+    &kp GRAVE   &kp N1  &kp N2  &kp N3    &kp N4  &kp N5  &kp N6    &kp N7  &kp N8  &kp N9    &kp N0    &kp DEL
+    &kp CAPS  &out OUT_TOG    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &kp MINUS    &kp EQUAL    &kp LBKT    &kp RBKT    &kp BSLH
+    &trans  &none    &none    &none    &none    &kp SEMI    &kp SQT    &kp COMMA  &kp DOT  &kp PG_UP    &kp RSHFT
+    &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp PG_DN  &kp END
                         >;
                 };
 
                 layer_2 {
 // ----------------------------------------------------------------------------
-// |  `  | NONE |  7  |  8  |  9  |PG_UP|NONE |  [   |  ]  |  -  |  =  | DEL  |
-// |   CAP |NONE |  4  |  5  |  6  |PG_DN| NONE | UP  |MO（3）| DOWN |    \    |
-// |          |NONE |  1  |  2  |  3  |NONE |NONE | NONE |NONE |NONE | TO（1） |
-// |      |     |     |       0       |               | NONE  | NONE| NONE    |
+// |  `  | F1 | F2 | F3 |  F4 |  F5 |  F6 | F7 | F8 | F9 | F10 |    |
+// |     | VOL- | MUTE | VOL+ | none  | none | 5  | 6  | 7 | 8 |  9 |
+// |     | PRVS | PLAY |NEXT | NONE  |  0 |  1 | 2 | 3 | 4 |   |
+// |     |    |    |    |   SPACE  | RAIT | F11| F12 |
                         bindings = <
-   &kp GRAVE  &none     &kp N7  &kp N8  &kp N9  &kp PG_UP      &none  &kp LBKT    &kp RBKT     &kp MINUS    &kp EQUAL    &kp DEL
-    &kp CAPS  &none     &kp N4  &kp N5  &kp N6  &kp PG_DN      &none  &kp UP  &mo 3  &kp DOWN    &kp BSLH
-    &trans    &none     &kp N1  &kp N2  &kp N3  &none          &none  &none   &none     &none    &tog 1
-    &trans    &trans    &trans  &kp N0  &trans     &none  &none   &none
-                        >;
-                };
-
-                layer_3 {
-// -----------------------------------------------------------------------------------------
-// | USB/BT | BT1 | F7 | F8 |  F9  | F10  | NONE | NONE|  NONE| NONE | NONE |  NONE  |
-// |   BT_CLR   | BT2 | F4 | F5 |  F6  |   F11   | NONE | NONE |     | NONE  |NONE  |
-// |           |  BT3  |  F1  |  F2  | F3  | F12  |NONE | NONE | NONE  | NONE | NONE |
-// |       |     |       |       NONE        |               |  NONE | NONE | NONE |
-                        bindings = <
-   &out OUT_TOG  &bt BT_SEL 0  &kp F7  &kp F8  &kp F9  &kp F10      &none  &none  &none  &none  &none &none
-   &bt BT_CLR   &bt BT_SEL 1  &kp F4  &kp F5  &kp F6  &kp F11      &none  &none  &trans  &none  &none
-   &trans       &bt BT_SEL 2  &kp F1  &kp F2  &kp F3  &kp F12      &none  &none  &none  &none   &none
-   &trans       &trans        &trans  &none  &trans     &none  &none  &none
+   &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9    &kp F10    &trans
+    &trans  &kp C_VOL_DN     &kp C_MUTE  &kp C_VOL_UP  &none  &none      &kp KP_N5  &kp KP_N6  &kp KP_N7  &kp KP_N8    &kp KP_N9
+    &trans    &kp C_PREV     &kp C_PLAY_PAUSE  &kp C_NEXT  &none  &kp KP_N0   &kp KP_N1  &kp KP_N2   &kp KP_N3     &kp KP_N4    &trans
+    &trans    &trans    &trans  &trans  &kp SPACE     &kp RALT  &kp F11   &kp F12
                         >;
                 };
         };
